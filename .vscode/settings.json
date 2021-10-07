@@ -1,0 +1,13 @@
+{
+    "files.exclude": {
+        "vendor": true,
+        "tmp": false,
+    },
+    "go.formatTool": "gofmt",
+    "go.formatFlags": [
+        "-s"
+    ],
+    "go.testFlags": [
+        "-v"
+    ]
+}
