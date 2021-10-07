@@ -1,3 +1,3 @@
-golang study
-
-check out a branch for each step.
+```sh
+go run main.go
+```
