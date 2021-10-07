@@ -8,11 +8,9 @@ hello:
 count:
 	@./scripts/build.sh count
 
-.PHONY: package-hello
 package-hello: cleanpackage
 	@scripts/package.sh hello Linux   linux   amd64
 
-.PHONY: package-count
 package-count: cleanpackage
 	@scripts/package.sh count Linux   linux   amd64
 
