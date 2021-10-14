@@ -25,7 +25,7 @@ if [ -d ".git" ]; then
 	LDFLAGS="$LDFLAGS -X $MODNAME/mods.versionString=${VERSION}"
 	LDFLAGS="$LDFLAGS -X $MODNAME/mods.versionGitSHA=${GITSHA}"
 fi
-GOVERSTR=$(go version | sed -r 's/go version go(.*)\ .*/\1/')
+GOVERSTR=$(go version | sed -E 's/go version go(.*)\ .*/\1/')
 LDFLAGS="$LDFLAGS -X $MODNAME/mods.goVersionString=${GOVERSTR}"
 LDFLAGS="$LDFLAGS -X $MODNAME/mods.buildTimestamp=$(date "+%Y-%m-%dT%H:%M:%S")"
 
